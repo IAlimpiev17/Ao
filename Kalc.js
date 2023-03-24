@@ -42,26 +42,26 @@ function calculate(xax) {
 function sasa(jojo, dio, jorno, Leng) {
     let s = jojo
     let d = dio
-   try {
-    if (countRim == 2) {
-        
-        for (let i = 0; i < rim.length; i++) {
-            if (s == rim[i]) {
-                s = i + 1
+    try {
+        if (countRim == 2) {
+
+            for (let i = 0; i < rim.length; i++) {
+                if (s == rim[i]) {
+                    s = i + 1
+                }
+                if (d == rim[i]) {
+                    d = i + 1
+                }
             }
-            if (d == rim[i]) {
-                d = i + 1
-            }
+            Leng = true;
+            return Lionelya(s, d, jorno, Leng);
         }
-        let Leng = true; 
-        return Lionelya(s, d, jorno, Leng);
+        else if (countArab == 2) {
+            return Lionelya(s, d, jorno, Leng);
+        }
+    } catch (error) {
+        throw error
     }
-    else if  (countArab == 2){
-       return Lionelya(s, d, jorno, Leng);
-    }
-   } catch (error) {
-    throw error
-   }
 
 }
 
@@ -111,11 +111,8 @@ function Soup(price, ghoust, rouch, Leng) {
     return flash(p, Leng)
 }
 function flash(p, Leng) {
-    if (Leng) { 
-
-    }
-    else {
-        let = temporaryP = p;
+    if (Leng) {
+        let temporaryP = p;
         p = [];
         while (temporaryP != 0) {
             if (temporaryP >= 100) {
@@ -179,6 +176,8 @@ function flash(p, Leng) {
             }
         }
         p = p.join("")
+    }
+    else {
     }
     return p.toString()
 }
